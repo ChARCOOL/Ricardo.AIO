@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B41F700-3E1E-414B-AE3A-FA70DB55FE0D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ricardo.AIO</RootNamespace>
+    <AssemblyName>Ricardo.AIO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnsoulSharp.Common">
+      <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\EnsoulSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EnsoulSharp.SDK">
+      <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\EnsoulSharp.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="EnsoulSharp.Wrapper">
+      <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\EnsoulSharp.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShen.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenAuto.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenCombo.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenConfig.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenDrawing.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenHelper.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenJungleClear.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenLaneClear.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenSword.cs" />
+    <Compile Include="BadaoShen\BadaoChampion\BadaoShen\BadaoShenVariables.cs" />
+    <Compile Include="BadaoShen\BadaoChecker.cs" />
+    <Compile Include="BadaoShen\BadaoMainVariables.cs" />
+    <Compile Include="BadaoShen\BadaoMath.cs" />
+    <Compile Include="BadaoShen\Program.cs" />
+    <Compile Include="ElLeeSin\Drawings.cs" />
+    <Compile Include="ElLeeSin\LeeSin.cs" />
+    <Compile Include="ElLeeSin\Components\MyMenu.cs" />
+    <Compile Include="ElLeeSin\Components\SpellManagers\EscapeHandler.cs" />
+    <Compile Include="ElLeeSin\Components\SpellManagers\InsecManager.cs" />
+    <Compile Include="ElLeeSin\Components\SpellManagers\PassiveManager.cs" />
+    <Compile Include="ElLeeSin\Components\SpellManagers\Wardmanager.cs" />
+    <Compile Include="ElLeeSin\Components\Spells\SpellE.cs" />
+    <Compile Include="ElLeeSin\Kurisu\BubbaSharp.cs" />
+    <Compile Include="ElLeeSin\Utilities\Geometry.cs" />
+    <Compile Include="ElLeeSin\Utilities\ItemManager.cs" />
+    <Compile Include="ElLeeSin\Utilities\Misc.cs" />
+    <Compile Include="ElLeeSin\Program.cs" />
+    <Compile Include="FlowersDarius\Logic.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\DoCast\DoCastManager.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Drawing\DrawManager.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\EventManager.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\LoopManager.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\Mode\Auto.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\Mode\Combo.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\Mode\Harass.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\Mode\JungleClear.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\Mode\KillSteal.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\Games\Mode\LaneClear.cs" />
+    <Compile Include="FlowersDarius\Manager\Events\SpellCast\SpellCastManager.cs" />
+    <Compile Include="FlowersDarius\Manager\Menu\MenuManager.cs" />
+    <Compile Include="FlowersDarius\Manager\Spells\SpellManager.cs" />
+    <Compile Include="FlowersDarius\myCommon\CheckStatus.cs" />
+    <Compile Include="FlowersDarius\myCommon\DamageCalculate.cs" />
+    <Compile Include="FlowersDarius\myCommon\DamageIndicator.cs" />
+    <Compile Include="FlowersDarius\myCommon\Distance.cs" />
+    <Compile Include="FlowersDarius\myCommon\ManaManager.cs" />
+    <Compile Include="FlowersDarius\myCommon\MenuManager.cs" />
+    <Compile Include="FlowersDarius\myCommon\MinionCache.cs" />
+    <Compile Include="FlowersDarius\Program.cs" />
+    <Compile Include="FlowersTwitch\HpBarDraw.cs" />
+    <Compile Include="FlowersTwitch\Program.cs" />
+    <Compile Include="hCamille\Extensions\Calculation.cs" />
+    <Compile Include="hCamille\Extensions\Menus.cs" />
+    <Compile Include="hCamille\Extensions\Spells.cs" />
+    <Compile Include="hCamille\Extensions\Utilities.cs" />
+    <Compile Include="hCamille\Champions\Camille.cs" />
+    <Compile Include="hCamille\Program.cs" />
+    <Compile Include="IllaoiTentacleKitty\Actions\Clear.cs" />
+    <Compile Include="IllaoiTentacleKitty\Actions\Combo.cs" />
+    <Compile Include="IllaoiTentacleKitty\Actions\Mixed.cs" />
+    <Compile Include="IllaoiTentacleKitty\Champion\Illaoi.cs" />
+    <Compile Include="IllaoiTentacleKitty\Extensions\DamageIndicator.cs" />
+    <Compile Include="IllaoiTentacleKitty\Extensions\Provider.cs" />
+    <Compile Include="IllaoiTentacleKitty\Handlers\Menus.cs" />
+    <Compile Include="IllaoiTentacleKitty\Handlers\Spells.cs" />
+    <Compile Include="IllaoiTentacleKitty\Program.cs" />
+    <Compile Include="KoreanAnnie\Annie.cs" />
+    <Compile Include="KoreanAnnie\AnnieButtons.cs" />
+    <Compile Include="KoreanAnnie\AnnieCore.cs" />
+    <Compile Include="KoreanAnnie\AnnieCustomMenu.cs" />
+    <Compile Include="KoreanAnnie\AnnieDrawings.cs" />
+    <Compile Include="KoreanAnnie\AnnieSpells.cs" />
+    <Compile Include="KoreanAnnie\AnnieTibbers.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonChamp.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonDamageDrawing.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonDisableAA.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonDisableAAMode.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonForceUltimate.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonMenu.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonOrbwalkImplementation.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonSpell.cs" />
+    <Compile Include="KoreanAnnie\Common\CommonSpells.cs" />
+    <Compile Include="KoreanAnnie\Common\FlashSpell.cs" />
+    <Compile Include="KoreanAnnie\Common\KoreanUtils.cs" />
+    <Compile Include="KoreanAnnie\Program.cs" />
+    <Compile Include="KoreanZed\Common\DamageDrawing.cs" />
+    <Compile Include="KoreanZed\Common\ForceUltimate.cs" />
+    <Compile Include="KoreanZed\Common\ItemData.cs" />
+    <Compile Include="KoreanZed\Enumerators\BlockListType.cs" />
+    <Compile Include="KoreanZed\Enumerators\ComboType.cs" />
+    <Compile Include="KoreanZed\Enumerators\ShadowHarassTrigger.cs" />
+    <Compile Include="KoreanZed\Program.cs" />
+    <Compile Include="KoreanZed\QueueActions\ActionQueue.cs" />
+    <Compile Include="KoreanZed\QueueActions\ActionQueueCheckAutoAttack.cs" />
+    <Compile Include="KoreanZed\QueueActions\ActionQueueItem.cs" />
+    <Compile Include="KoreanZed\QueueActions\ActionQueueList.cs" />
+    <Compile Include="KoreanZed\Zed.cs" />
+    <Compile Include="KoreanZed\ZedAntiGapCloser.cs" />
+    <Compile Include="KoreanZed\ZedAutoE.cs" />
+    <Compile Include="KoreanZed\ZedComboSelector.cs" />
+    <Compile Include="KoreanZed\ZedCore.cs" />
+    <Compile Include="KoreanZed\ZedDrawingSpells.cs" />
+    <Compile Include="KoreanZed\ZedEnergyChecker.cs" />
+    <Compile Include="KoreanZed\ZedFlee.cs" />
+    <Compile Include="KoreanZed\ZedKS.cs" />
+    <Compile Include="KoreanZed\ZedMenu.cs" />
+    <Compile Include="KoreanZed\ZedOffensiveItems.cs" />
+    <Compile Include="KoreanZed\ZedPotions.cs" />
+    <Compile Include="KoreanZed\ZedShadows.cs" />
+    <Compile Include="KoreanZed\ZedSpell.cs" />
+    <Compile Include="KoreanZed\ZedSpellDodge.cs" />
+    <Compile Include="KoreanZed\ZedSpells.cs" />
+    <Compile Include="KoreanZed\ZedUnderTurretFarm.cs" />
+    <Compile Include="PRADAVayneReborn\MyInitializer\Logic.cs" />
+    <Compile Include="PRADAVayneReborn\MyInitializer\Menu.cs" />
+    <Compile Include="PRADAVayneReborn\MyInitializer\Notifications.cs" />
+    <Compile Include="PRADAVayneReborn\MyInitializer\PRADALoader.cs" />
+    <Compile Include="PRADAVayneReborn\MyInitializer\Spells.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\E\AntiAssasins.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\E\Interrupter.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\E\Jungle.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\E\OnGapcloser.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\E\OnUpdate.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Others\OnDraw.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Others\OnProcessSpellcast.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Others\OnUpdate.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Others\SkinHack.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\AfterAttack.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\BeforeAttack.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\OnAttack.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\OnCastSpell.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\OnGapcloser.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\OnProcessSpellCast.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\OnUpdate.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\Q\Tumble.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\R\BeforeAttack.cs" />
+    <Compile Include="PRADAVayneReborn\MyLogic\R\OnCastSpell.cs" />
+    <Compile Include="PRADAVayneReborn\MyUtils\MyCache.cs" />
+    <Compile Include="PRADAVayneReborn\MyUtils\MyExtensions.cs" />
+    <Compile Include="PRADAVayneReborn\MyUtils\MyGeometry.cs" />
+    <Compile Include="PRADAVayneReborn\MyUtils\MyLists.cs" />
+    <Compile Include="PRADAVayneReborn\MyUtils\MySpellDb.cs" />
+    <Compile Include="PRADAVayneReborn\MyUtils\MyWizard.cs" />
+    <Compile Include="PRADAVayneReborn\Program.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StunOFF.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StunON.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\denymouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZedStar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZedTheLine.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
