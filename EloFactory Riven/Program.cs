@@ -517,11 +517,11 @@ namespace EloFactory_Riven
             if (Config.Item("Riven.KeepQUp").GetValue<bool>())
                 if (Player.GetBuffCount("RivenTriCleaveBuff") >= 1)
                     if (Utils.GameTimeTickCount - lastCastQ >= 3650)
-                        Q.Cast(Game.CursorPosRaw);
+                        Q.Cast(Game.CursorPosCenter);
 
             if (Config.Item("Riven.FleeActive").GetValue<KeyBind>().Active)
             {
-                EnsoulSharp.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPosRaw);
+                EnsoulSharp.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPosCenter);
                 FleeLogic();
             }
 
@@ -1951,27 +1951,27 @@ namespace EloFactory_Riven
                     {
                         case 0:
                             {
-                                E.Cast(Game.CursorPosRaw, true);
+                                E.Cast(Game.CursorPosCenter, true);
                                 break;
                             }
 
                         case 1:
                             {
-                                if (Player.GetBuffCount("RivenTriCleaveBuff") == 1) E.Cast(Game.CursorPosRaw, true);
+                                if (Player.GetBuffCount("RivenTriCleaveBuff") == 1) E.Cast(Game.CursorPosCenter, true);
                                 break;
                             }
 
                         case 2:
                             {
-                                if (Player.GetBuffCount("RivenTriCleaveBuff") == 2) E.Cast(Game.CursorPosRaw, true);
+                                if (Player.GetBuffCount("RivenTriCleaveBuff") == 2) E.Cast(Game.CursorPosCenter, true);
                                 break;
                             }
                     }
                 else
-                    E.Cast(Game.CursorPosRaw, true);
+                    E.Cast(Game.CursorPosCenter, true);
             }
 
-            if (Config.Item("Riven.UseQFleeMode").GetValue<bool>()) Q.Cast(Game.CursorPosRaw, true);
+            if (Config.Item("Riven.UseQFleeMode").GetValue<bool>()) Q.Cast(Game.CursorPosCenter, true);
         }
 
         #endregion

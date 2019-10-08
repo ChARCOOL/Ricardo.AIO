@@ -15,7 +15,7 @@ namespace mztikksCassiopeia.Modes
                 HeroManager.Enemies.Where(
                         x =>
                             !x.IsDead && x.IsValid && x.Distance(ObjectManager.Player) < Spells.R.Range
-                            && x.IsFacing(ObjectManager.Player)).OrderBy(x => x.Distance(Game.CursorPosRaw))
+                            && x.IsFacing(ObjectManager.Player)).OrderBy(x => x.Distance(Game.CursorPosCenter))
                     .FirstOrDefault();
             if (target == null) return;
             var rPred = Spells.R.GetPrediction(target, true);

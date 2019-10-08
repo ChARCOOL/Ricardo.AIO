@@ -374,7 +374,7 @@ namespace ElLeeSin
                 {
                     resetTime = Environment.TickCount + 3000;
                     InsecManager.ClicksecEnabled = true;
-                    InsecManager.InsecClickPos = Game.CursorPosRaw;
+                    InsecManager.InsecClickPos = Game.CursorPosCenter;
                     clickCount = 0;
                 }
 
@@ -421,7 +421,7 @@ namespace ElLeeSin
 
                 if (MyMenu.Menu.Item("InsecEnabled").GetValue<KeyBind>().Active)
                 {
-                    if (Misc.GetMenuItem("insecOrbwalk")) Misc.Orbwalk(Game.CursorPosRaw);
+                    if (Misc.GetMenuItem("insecOrbwalk")) Misc.Orbwalk(Game.CursorPosCenter);
 
                     var newTarget = Misc.GetMenuItem("insecMode")
                         ? TargetSelector.SelectedTarget
@@ -480,19 +480,19 @@ namespace ElLeeSin
             if (args.Msg != (uint)WindowsMessages.WM_LBUTTONDOWN) return;
 
             var asec = HeroManager.Enemies.Where(a =>
-                EnsoulSharp.Common.Geometry.Distance(a, Game.CursorPosRaw) < 200 && a.IsValid && !a.IsDead);
+                EnsoulSharp.Common.Geometry.Distance(a, Game.CursorPosCenter) < 200 && a.IsValid && !a.IsDead);
             if (asec.Any()) return;
 
             if (!lastClickBool || clickCount == 0)
             {
                 clickCount++;
-                lastClickPos = Game.CursorPosRaw;
+                lastClickPos = Game.CursorPosCenter;
                 lastClickBool = true;
                 doubleClickReset = Environment.TickCount + 600;
                 return;
             }
 
-            if (lastClickBool && EnsoulSharp.Common.Geometry.Distance(lastClickPos, Game.CursorPosRaw) < 200)
+            if (lastClickBool && EnsoulSharp.Common.Geometry.Distance(lastClickPos, Game.CursorPosCenter) < 200)
             {
                 clickCount++;
                 lastClickBool = false;
@@ -849,7 +849,7 @@ namespace ElLeeSin
 
                 Orbwalking.Orbwalk(
                     target ?? null,
-                    Game.CursorPosRaw,
+                    Game.CursorPosCenter,
                     MyMenu.Menu.Item("ExtraWindup").GetValue<Slider>().Value,
                     MyMenu.Menu.Item("HoldPosRadius").GetValue<Slider>().Value);
 

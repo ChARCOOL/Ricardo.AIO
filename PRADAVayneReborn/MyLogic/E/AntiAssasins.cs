@@ -13,7 +13,7 @@ namespace PRADA_Vayne.MyLogic.E
             if (sender.Name.ToLower().Contains("leapsound.troy"))
             {
                 var rengo = Heroes.EnemyHeroes.FirstOrDefault(h => h.CharacterName == "Rengar");
-                if (rengo.IsValidTarget(545) && Program.E.IsReady()) Program.E.Cast(rengo);
+                if (rengo.IsValidTarget(550) && Program.E.IsReady()) Program.E.Cast(rengo);
             }
         }
     }

@@ -21,9 +21,9 @@ namespace KoreanZed
         {
             if (zedMenu.GetParamKeyBind("koreanzed.miscmenu.flee"))
             {
-                ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPosRaw);
+                ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, Game.CursorPosCenter);
                 //Console.WriteLine("flee 1");
-                zedShadows.Cast(Game.CursorPosRaw);
+                zedShadows.Cast(Game.CursorPosCenter);
                 //Console.WriteLine("flee 2");
                 zedShadows.Switch();
                 //Console.WriteLine("flee 3");

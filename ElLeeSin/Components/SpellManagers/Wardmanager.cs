@@ -185,7 +185,7 @@ namespace ElLeeSin.Components.SpellManagers
         public static void WardjumpToMouse()
         {
             WardJump(
-                Game.CursorPosRaw,
+                Game.CursorPosCenter,
                 Misc.GetMenuItem("ElLeeSin.Wardjump.Mouse"),
                 false,
                 false,

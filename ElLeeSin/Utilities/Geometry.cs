@@ -1442,7 +1442,7 @@ namespace ElLeeSin
         public static Vector3 SetZ(this Vector3 v, float? value = null)
         {
             if (value == null)
-                v.Z = Game.CursorPosRaw.Z;
+                v.Z = Game.CursorPosCenter.Z;
             else
                 v.Z = (float)value;
             return v;

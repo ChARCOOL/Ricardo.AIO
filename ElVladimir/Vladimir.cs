@@ -110,7 +110,7 @@ namespace ElVladimirReborn
 
             if (CheckMenu("ElVladimir.Combo.E") && spells[Spells.E].IsReady() && target.IsValidTarget(800))
                 if (Player.Distance(target) > 300 && Player.Distance(target) < spells[Spells.E].Range)
-                    spells[Spells.E].StartCharging(Game.CursorPosRaw);
+                    spells[Spells.E].StartCharging(Game.CursorPosCenter);
 
             if (CheckMenu("ElVladimir.Combo.W") && spells[Spells.W].IsReady()
                                                 && target.IsValidTarget(spells[Spells.W].Range))
@@ -148,7 +148,7 @@ namespace ElVladimirReborn
 
             if (CheckMenu("ElVladimir.Harass.E") && spells[Spells.E].IsReady() && target.IsValidTarget(800)) //
                 if (Player.Distance(target) < 800)
-                    spells[Spells.E].StartCharging(Game.CursorPosRaw);
+                    spells[Spells.E].StartCharging(Game.CursorPosCenter);
         }
 
         private static void OnJungleClear()

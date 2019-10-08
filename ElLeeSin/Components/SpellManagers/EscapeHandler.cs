@@ -84,7 +84,7 @@ namespace ElLeeSin.Components.SpellManagers
 
         private static void Escape()
         {
-            Misc.Orbwalk(Game.CursorPosRaw);
+            Misc.Orbwalk(Game.CursorPosCenter);
 
             if (BuffedEnemy.IsValidTarget() && BuffedEnemy.IsValid<AIHeroClient>())
             {
@@ -99,7 +99,7 @@ namespace ElLeeSin.Components.SpellManagers
 
             rect = new Geometry.Polygon.Rectangle(
                 ObjectManager.Player.Position.To2D(),
-                ObjectManager.Player.Position.To2D().Extend(Game.CursorPosRaw.To2D(), 1050),
+                ObjectManager.Player.Position.To2D().Extend(Game.CursorPosCenter.To2D(), 1050),
                 100);
 
             if (Misc.IsQOne)

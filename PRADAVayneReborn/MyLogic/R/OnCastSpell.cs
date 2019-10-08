@@ -13,7 +13,7 @@ namespace PRADA_Vayne.MyLogic.R
                 if (args.Slot == SpellSlot.R && Program.ComboMenu.Item("QR").GetValue<bool>())
                 {
                     var target = TargetSelector.GetTarget(300, TargetSelector.DamageType.Physical);
-                    var tumblePos = target != null ? target.GetTumblePos() : Game.CursorPosRaw;
+                    var tumblePos = target != null ? target.GetTumblePos() : Game.CursorPosCenter;
                     Tumble.Cast(tumblePos);
                 }
         }

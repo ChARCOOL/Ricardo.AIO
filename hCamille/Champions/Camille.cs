@@ -266,7 +266,7 @@ namespace hCamille.Champions
 
             if (Menus.Config.Item("flee").GetValue<KeyBind>().Active)
             {
-                Orbwalking.MoveTo(Game.CursorPosRaw);
+                Orbwalking.MoveTo(Game.CursorPosCenter);
                 if (Spells.E.IsReady()) FleeE();
             }
         }
@@ -451,7 +451,7 @@ namespace hCamille.Champions
                 for (var i = 0; i < listPoint.Count - 1; i++)
                 {
                     var rectangle = new Geometry.Polygon.Rectangle(ObjectManager.Player.Position,
-                        ObjectManager.Player.Position.Extend(Game.CursorPosRaw, Spells.E.Range), Spells.E.Width);
+                        ObjectManager.Player.Position.Extend(Game.CursorPosCenter, Spells.E.Range), Spells.E.Width);
                     if (listPoint[i].Item1.IsWall() &&
                         listPoint[i].Item1.Distance(ObjectManager.Player.Position) <
                         Utilities.Slider("wall.distance.to.enemy") &&
