@@ -57,6 +57,18 @@ namespace Ricardo.AIO
                 case "Twitch":
                     Flowers_Twitch.Program.TwitchMain();
                     break;
+
+                case "Vladimir":
+                    ElVladimirReborn.Program.VladimirMain();
+                    break;
+
+                case "Riven":
+                    EloFactory_Riven.Program.RivenMain();
+                    break;
+
+                case "Cassiopeia":
+                    mztikksCassiopeia.Program.CassiopeiaMain();
+                    break;
             }
         }
     }

@@ -43,7 +43,6 @@ namespace PRADA_Vayne.MyInitializer
             Game.OnUpdate += MyLogic.Others.Events.OnUpdate;
             AIBaseClient.OnProcessSpellCast += MyLogic.Others.Events.OnProcessSpellcast;
             Drawing.OnDraw += MyLogic.Others.Events.OnDraw;
-            Game.OnUpdate += SkinHack.OnUpdate;
 
             #endregion Others
         }

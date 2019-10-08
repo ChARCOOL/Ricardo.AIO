@@ -28,7 +28,6 @@ namespace PRADA_Vayne.MyInitializer
                 new Menu("Drawing Settings", "drawingsmenu").SetFontStyle(FontStyle.Regular, Color.Turquoise);
             Program.DrawingsMenu.AddItem(new MenuItem("streamingmode", "Disable All Drawings").SetValue(false));
             Program.DrawingsMenu.AddItem(new MenuItem("drawenemywaypoints", "Draw Enemy Waypoints").SetValue(true));
-            Program.SkinhackMenu = new Menu("Skin Hack", "skinhackmenu").SetFontStyle(FontStyle.Bold, Color.Gold);
             Program.OrbwalkerMenu =
                 new Menu("Orbwalker", "orbwalkermenu").SetFontStyle(FontStyle.Regular, Color.Turquoise);
             Program.ComboMenu.AddItem(new MenuItem("QCombo", "Auto Tumble").SetValue(true));
@@ -76,17 +75,6 @@ namespace PRADA_Vayne.MyInitializer
                 new MenuItem("QLastHitMana", "Min Mana% for Q Lasthit").SetValue(new Slider(45)));
             Program.LaneClearMenu.AddItem(new MenuItem("EJungleMobs", "Use E on Jungle Mobs").SetValue(true))
                 .SetFontStyle(FontStyle.Bold, Color.Red);
-            Program.SkinhackMenu.AddItem(new MenuItem("shkenabled", "Enabled").SetValue(true));
-            Program.SkinhackMenu.AddItem(new MenuItem("skin", "Skin: ").SetValue(
-                new StringList(
-                    new[]
-                    {
-                        "Classic", "Vindicator", "Aristocrat", "Dragonslayer", "Heartseeker", "SKT T1", "Arclight",
-                        "Dragonslayer Green", "Dragonslayer Red", "Dragonslayer Azure", "Soulstealer"
-                    }, 10))).SetFontStyle(FontStyle.Bold, Color.Gold).ValueChanged += (sender, args) =>
-            {
-                Utility.DelayAction.Add(250, SkinHack.RefreshSkin);
-            };
         }
 
         public static void InitOrbwalker()
@@ -99,7 +87,6 @@ namespace PRADA_Vayne.MyInitializer
             Program.MainMenu.AddSubMenu(Program.ComboMenu);
             Program.MainMenu.AddSubMenu(Program.LaneClearMenu);
             Program.MainMenu.AddSubMenu(Program.EscapeMenu);
-            Program.MainMenu.AddSubMenu(Program.SkinhackMenu);
             Program.MainMenu.AddSubMenu(Program.DrawingsMenu);
             Program.MainMenu.AddSubMenu(Program.OrbwalkerMenu);
         }

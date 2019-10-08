@@ -45,6 +45,9 @@
     <Reference Include="EnsoulSharp.Wrapper">
       <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\EnsoulSharp.Wrapper.dll</HintPath>
     </Reference>
+    <Reference Include="SebbyLib">
+      <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\SebbyLib.dll</HintPath>
+    </Reference>
     <Reference Include="SharpDX">
       <HintPath>C:\Users\Kudret\Desktop\EnsoulSharp\System\SharpDX.dll</HintPath>
     </Reference>
@@ -83,6 +86,11 @@
     <Compile Include="ElLeeSin\Utilities\ItemManager.cs" />
     <Compile Include="ElLeeSin\Utilities\Misc.cs" />
     <Compile Include="ElLeeSin\Program.cs" />
+    <Compile Include="EloFactory Riven\Program.cs" />
+    <Compile Include="ElVladimir\Drawings.cs" />
+    <Compile Include="ElVladimir\ElVladimirMenu.cs" />
+    <Compile Include="ElVladimir\Program.cs" />
+    <Compile Include="ElVladimir\Vladimir.cs" />
     <Compile Include="FlowersDarius\Logic.cs" />
     <Compile Include="FlowersDarius\Manager\Events\DoCast\DoCastManager.cs" />
     <Compile Include="FlowersDarius\Manager\Events\Drawing\DrawManager.cs" />
@@ -169,6 +177,22 @@
     <Compile Include="KoreanZed\ZedSpellDodge.cs" />
     <Compile Include="KoreanZed\ZedSpells.cs" />
     <Compile Include="KoreanZed\ZedUnderTurretFarm.cs" />
+    <Compile Include="mztikk%27s Cass\Computed.cs" />
+    <Compile Include="mztikk%27s Cass\Config.cs" />
+    <Compile Include="mztikk%27s Cass\Events.cs" />
+    <Compile Include="mztikk%27s Cass\Extensions\HeroExts.cs" />
+    <Compile Include="mztikk%27s Cass\Extensions\SpellExts.cs" />
+    <Compile Include="mztikk%27s Cass\Extensions\VectorExts.cs" />
+    <Compile Include="mztikk%27s Cass\Mainframe.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\AssistedR.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\Automated.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\Combo.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\Harass.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\JungleClear.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\LaneClear.cs" />
+    <Compile Include="mztikk%27s Cass\Modes\LastHit.cs" />
+    <Compile Include="mztikk%27s Cass\Program.cs" />
+    <Compile Include="mztikk%27s Cass\Spells.cs" />
     <Compile Include="PRADAVayneReborn\MyInitializer\Logic.cs" />
     <Compile Include="PRADAVayneReborn\MyInitializer\Menu.cs" />
     <Compile Include="PRADAVayneReborn\MyInitializer\Notifications.cs" />
@@ -182,7 +206,6 @@
     <Compile Include="PRADAVayneReborn\MyLogic\Others\OnDraw.cs" />
     <Compile Include="PRADAVayneReborn\MyLogic\Others\OnProcessSpellcast.cs" />
     <Compile Include="PRADAVayneReborn\MyLogic\Others\OnUpdate.cs" />
-    <Compile Include="PRADAVayneReborn\MyLogic\Others\SkinHack.cs" />
     <Compile Include="PRADAVayneReborn\MyLogic\Q\AfterAttack.cs" />
     <Compile Include="PRADAVayneReborn\MyLogic\Q\BeforeAttack.cs" />
     <Compile Include="PRADAVayneReborn\MyLogic\Q\OnAttack.cs" />

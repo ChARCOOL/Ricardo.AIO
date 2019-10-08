@@ -15,7 +15,6 @@ namespace PRADA_Vayne.MyInitializer
                 LoadSpells();
                 LoadLogic();
                 ShowNotifications();
-                SkinHack.Load();
             }
         }
     }
