@@ -61,7 +61,7 @@ namespace KoreanAnnie
                 else
                     foreach (var pred in ObjectManager.Get<AIHeroClient>().Where(x => x.IsValidTarget(spells.R.Range))
                         .Select(x => spells.R.GetPrediction(x, true)).Where(pred =>
-                            pred.Hitchance >= HitChance.High && pred.AoeTargetsHitCount >= minEnemiesToR))
+                            pred.Hitchance >= HitChance.Medium && pred.AoeTargetsHitCount >= minEnemiesToR))
                         spells.R.Cast(pred.CastPosition);
             }
 

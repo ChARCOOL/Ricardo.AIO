@@ -42,7 +42,7 @@ namespace KoreanZed
                 {
                     var predictionOutput = q.GetPrediction(objAiHero);
 
-                    if (predictionOutput.Hitchance >= HitChance.High &&
+                    if (predictionOutput.Hitchance >= HitChance.Medium &&
                         (!q.GetCollision(player.Position.To2D(),
                              new List<Vector2> { predictionOutput.CastPosition.To2D() }).Any()
                          || q.GetDamage(objAiHero) / 2 > objAiHero.Health))

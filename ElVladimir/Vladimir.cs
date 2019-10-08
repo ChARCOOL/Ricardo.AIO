@@ -127,7 +127,7 @@ namespace ElVladimirReborn
                         !target.IsDead)
                     {
                         var pred = spells[Spells.R].GetPrediction(target);
-                        if (pred.Hitchance >= HitChance.VeryHigh) spells[Spells.R].Cast(pred.CastPosition);
+                        if (pred.Hitchance >= HitChance.Medium) spells[Spells.R].Cast(pred.CastPosition);
                     }
                 }
 

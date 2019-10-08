@@ -1246,7 +1246,7 @@ namespace EloFactory_Riven
                 #endregion
 
                 #region HealthPotion
-                else if (HealthPotion.IsReady() && !Player.HasBuff("RegenerationPotion") &&
+                else if (HealthPotion.IsReady() && !Player.HasBuff("Health Potion") &&
                          !Player.HasBuff("ItemCrystalFlask"))
                 {
                     if (Player.MaxHealth > Player.Health + 150 && Player.CountEnemiesInRange(1000) > 0 &&
@@ -1261,7 +1261,7 @@ namespace EloFactory_Riven
 
                 #region CrystallineFlask
                 else if (CrystallineFlask.IsReady() && !Player.HasBuff("ItemCrystalFlask") &&
-                         !Player.HasBuff("RegenerationPotion") && !Player.HasBuff("FlaskOfCrystalWater") &&
+                         !Player.HasBuff("Health Potion") && !Player.HasBuff("ItemCrystalFlaskCharge") &&
                          !Player.HasBuff("ItemMiniRegenPotion"))
                 {
                     if (Player.MaxHealth > Player.Health + 120 && Player.MaxMana > Player.Mana + 60 &&
@@ -1277,7 +1277,7 @@ namespace EloFactory_Riven
                 #endregion
 
                 #region ManaPotion
-                else if (ManaPotion.IsReady() && !Player.HasBuff("FlaskOfCrystalWater") &&
+                else if (ManaPotion.IsReady() && !Player.HasBuff("ItemCrystalFlaskCharge") &&
                          !Player.HasBuff("ItemCrystalFlask"))
                 {
                     if (Player.MaxMana > Player.Mana + 100 && Player.CountEnemiesInRange(1000) > 0 &&
@@ -1993,13 +1993,13 @@ namespace EloFactory_Riven
                     R.CastIfWillHit(target, Config.Item("Riven.MiniCountR2").GetValue<Slider>().Value);
 
                     if (R.GetDamage(target) / target.MaxHealth * 100 > target.Health / target.MaxHealth * 50)
-                        R.CastIfHitchanceEquals(target, HitChance.VeryHigh, true);
+                        R.CastIfHitchanceEquals(target, HitChance.Medium, true);
 
                     if (Q.IsReady() && target.Health <=
                         (float)(R.GetDamage(target) + Player.GetAutoAttackDamage(target) * 2 + Q.GetDamage(target)) * 1.2)
                         if (target.Distance(Player.Position) <= Player.AttackRange + 180)
                         {
-                            R.CastIfHitchanceEquals(target, HitChance.VeryHigh, true);
+                            R.CastIfHitchanceEquals(target, HitChance.Medium, true);
                             EnsoulSharp.Player.IssueOrder(GameObjectOrder.AttackUnit, target);
                         }
                 }
@@ -2028,7 +2028,7 @@ namespace EloFactory_Riven
 
                     if (Player.HasBuff("RivenWindScarReady") && R.GetDamage(targets) > targets.Health &&
                         targets.Distance(Player) < R.Range &&
-                        !target.HasBuff("BansheesVeil")) R.CastIfHitchanceEquals(targets, HitChance.VeryHigh, true);
+                        !target.HasBuff("BansheesVeil")) R.CastIfHitchanceEquals(targets, HitChance.Medium, true);
 
                     if (useQKS && Q.IsReady() && target.Health < Q.GetDamage(target) &&
                         Player.Distance(target) <= Q.Range && !target.IsDead && target.IsValidTarget())

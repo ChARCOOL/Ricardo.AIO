@@ -18,7 +18,7 @@ namespace mztikksCassiopeia.Modes
                 && !ObjectManager.Player.Spellbook.IsAutoAttack)
             {
                 var qPred = Spells.Q.GetPrediction(target);
-                if (qPred.Hitchance >= HitChance.High) Spells.Q.Cast(qPred.CastPosition);
+                if (qPred.Hitchance >= HitChance.Medium) Spells.Q.Cast(qPred.CastPosition);
             }
 
             if (Config.IsChecked("useWInHarass") && Spells.W.IsReady() && target.IsValidTarget(Spells.W.Range)
@@ -31,14 +31,14 @@ namespace mztikksCassiopeia.Modes
                     {
                         var wPred = Spells.W.GetPrediction(target);
                         if (wPred.CastPosition.Distance(ObjectManager.Player.Position) >= Spells.WMinRange
-                            && wPred.Hitchance >= HitChance.High)
+                            && wPred.Hitchance >= HitChance.Medium)
                             Spells.W.Cast(wPred.CastPosition);
                     }
                 }
                 else
                 {
                     var wPred = Spells.W.GetPrediction(target);
-                    if (wPred.Hitchance >= HitChance.High) Spells.W.Cast(wPred.CastPosition);
+                    if (wPred.Hitchance >= HitChance.Medium) Spells.W.Cast(wPred.CastPosition);
                 }
             }
 

@@ -472,7 +472,7 @@ namespace hCamille.Champions
                 if (Spells.W.IsReady() && Utilities.Enabled("w.combo") && target.IsValidTarget(Spells.W.Range))
                 {
                     var pred = Spells.W.GetPrediction(target);
-                    if (pred.Hitchance >= HitChance.High) Spells.W.Cast(pred.CastPosition);
+                    if (pred.Hitchance >= HitChance.Medium) Spells.W.Cast(pred.CastPosition);
                 }
             }
         }

@@ -151,7 +151,7 @@ namespace KoreanAnnie
                     foreach (var pred in ObjectManager.Get<AIHeroClient>()
                         .Where(x => x.IsValidTarget(annie.Spells.RFlash.Range))
                         .Select(x => annie.Spells.RFlash.GetPrediction(x, true)).Where(pred =>
-                            pred.Hitchance >= HitChance.High && pred.AoeTargetsHitCount >= minToCast))
+                            pred.Hitchance >= HitChance.Medium && pred.AoeTargetsHitCount >= minToCast))
                     {
                         var pred1 = pred;
                         annie.Player.Spellbook.CastSpell(FlashSpell.Slot(annie.Player), pred1.CastPosition);

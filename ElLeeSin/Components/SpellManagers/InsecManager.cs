@@ -170,7 +170,7 @@ namespace ElLeeSin.Components.SpellManagers
                     if (Misc.IsQOne)
                     {
                         var pred1 = LeeSin.spells[LeeSin.Spells.Q].GetPrediction(target);
-                        if (pred1.Hitchance >= HitChance.High)
+                        if (pred1.Hitchance >= HitChance.Medium)
                             LeeSin.CastQ(target, Misc.GetMenuItem("ElLeeSin.Smite.Q"));
 
                         if (!Misc.GetMenuItem("checkOthers2")) return;

@@ -42,7 +42,7 @@ namespace mztikksCassiopeia.Modes
             if (Config.IsChecked("useQInCombo") && Spells.Q.IsReady() && !target.HasBuffOfType(BuffType.Poison))
             {
                 var qPred = Spells.Q.GetPrediction(target);
-                if (qPred.Hitchance >= HitChance.VeryHigh) Spells.Q.Cast(qPred.CastPosition);
+                if (qPred.Hitchance >= HitChance.Medium) Spells.Q.Cast(qPred.CastPosition);
             }
 
             if (Config.IsChecked("useWInCombo") && Spells.W.IsReady() && target.IsValidTarget(Spells.W.Range))
@@ -54,7 +54,7 @@ namespace mztikksCassiopeia.Modes
                     {
                         var wPred = Spells.W.GetPrediction(target);
                         if (wPred.CastPosition.Distance(ObjectManager.Player.Position) >= Spells.WMinRange
-                            && wPred.Hitchance >= HitChance.VeryHigh)
+                            && wPred.Hitchance >= HitChance.Medium)
                             Spells.W.Cast(wPred.CastPosition);
                     }
                 }
@@ -62,7 +62,7 @@ namespace mztikksCassiopeia.Modes
                 {
                     var wPred = Spells.W.GetPrediction(target);
                     if (wPred.CastPosition.Distance(ObjectManager.Player.Position) >= Spells.WMinRange &&
-                        wPred.Hitchance >= HitChance.VeryHigh) Spells.W.Cast(wPred.CastPosition);
+                        wPred.Hitchance >= HitChance.Medium) Spells.W.Cast(wPred.CastPosition);
                 }
             }
 

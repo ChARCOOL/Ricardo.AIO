@@ -123,7 +123,7 @@ namespace ElLeeSin
             if (!spells[Spells.Q].IsReady()) return;
 
             var prediction = spells[Spells.Q].GetPrediction(target);
-            if (prediction.Hitchance >= HitChance.High) spells[Spells.Q].Cast(target);
+            if (prediction.Hitchance >= HitChance.Medium) spells[Spells.Q].Cast(target);
 
             if (smiteQ && Misc.GetMenuItem("ElLeeSin.Smite.Q"))
                 if (target.IsValidTarget(spells[Spells.Q].Range)

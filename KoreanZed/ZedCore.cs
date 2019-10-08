@@ -393,7 +393,7 @@ namespace KoreanZed
 
                     var checkColision = zedMenu.GetParamBool("koreanzed.harasmenu.checkcollisiononq");
 
-                    if (predictionOutput.Hitchance >= HitChance.High
+                    if (predictionOutput.Hitchance >= HitChance.Medium
                         && (!checkColision
                             || !q.GetCollision(
                                 player.Position.To2D(),

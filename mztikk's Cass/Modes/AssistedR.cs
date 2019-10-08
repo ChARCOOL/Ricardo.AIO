@@ -19,7 +19,7 @@ namespace mztikksCassiopeia.Modes
                     .FirstOrDefault();
             if (target == null) return;
             var rPred = Spells.R.GetPrediction(target, true);
-            if (rPred.Hitchance >= HitChance.High) Spells.R.Cast(rPred.CastPosition);
+            if (rPred.Hitchance >= HitChance.Medium) Spells.R.Cast(rPred.CastPosition);
         }
 
         #endregion Methods

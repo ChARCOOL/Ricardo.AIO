@@ -48,7 +48,7 @@ namespace mztikksCassiopeia
                 interrupter.DangerLevel == wanteDangerLevel)
             {
                 var rPred = Spells.R.GetPrediction(interrupter.Sender);
-                if (rPred.Hitchance >= HitChance.High)
+                if (rPred.Hitchance >= HitChance.Medium)
                 {
                     var delay = Mainframe.RDelay.Next(100, 120);
                     Utility.DelayAction.Add(delay, () => Spells.R.Cast(rPred.CastPosition));

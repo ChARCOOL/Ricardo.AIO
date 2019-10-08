@@ -190,11 +190,11 @@ namespace Illaoi___Tentacle_Kitty
                 var enemy = HeroManager.Enemies.FirstOrDefault(x => x.IsValidTarget(Q.Range));
                 var enemyGhost = ObjectManager.Get<AIMinionClient>().FirstOrDefault(x => x.Name == enemy.Name);
                 if (enemy != null && enemyGhost == null)
-                    if (Q.CanCast(enemy) && Q.GetPrediction(enemy).Hitchance >= HitChance.High
+                    if (Q.CanCast(enemy) && Q.GetPrediction(enemy).Hitchance >= HitChance.Medium
                                          && Q.GetPrediction(enemy).CollisionObjects.Count == 0)
                         Q.Cast(enemy);
                 if (enemy == null && enemyGhost != null && Config.Item("q.ghost.combo").GetValue<bool>())
-                    if (Q.CanCast(enemyGhost) && Q.GetPrediction(enemyGhost).Hitchance >= HitChance.High
+                    if (Q.CanCast(enemyGhost) && Q.GetPrediction(enemyGhost).Hitchance >= HitChance.Medium
                                               && Q.GetPrediction(enemyGhost).CollisionObjects.Count == 0)
                         Q.Cast(enemyGhost);
             }
@@ -211,7 +211,7 @@ namespace Illaoi___Tentacle_Kitty
                 foreach (var enemy in HeroManager.Enemies.Where(o =>
                     o.IsValidTarget(E.Range) && !o.IsDead && !o.IsZombie))
                     if (Config.Item("enemy." + enemy.CharacterData.CharacterName)
-                            .GetValue<bool>() && E.GetPrediction(enemy).Hitchance >= HitChance.High
+                            .GetValue<bool>() && E.GetPrediction(enemy).Hitchance >= HitChance.Medium
                                               && E.GetPrediction(enemy).CollisionObjects.Count == 0)
                         E.Cast(enemy);
             if (R.IsReady() && Config.Item("r.combo").GetValue<bool>())
@@ -229,11 +229,11 @@ namespace Illaoi___Tentacle_Kitty
                 var enemy = HeroManager.Enemies.FirstOrDefault(x => x.IsValidTarget(Q.Range));
                 var enemyGhost = ObjectManager.Get<AIMinionClient>().FirstOrDefault(x => x.Name == enemy.Name);
                 if (enemy != null && enemyGhost == null)
-                    if (Q.CanCast(enemy) && Q.GetPrediction(enemy).Hitchance >= HitChance.High
+                    if (Q.CanCast(enemy) && Q.GetPrediction(enemy).Hitchance >= HitChance.Medium
                                          && Q.GetPrediction(enemy).CollisionObjects.Count == 0)
                         Q.Cast(enemy);
                 if (enemy == null && enemyGhost != null && Config.Item("q.ghost.harass").GetValue<bool>())
-                    if (Q.CanCast(enemyGhost) && Q.GetPrediction(enemyGhost).Hitchance >= HitChance.High
+                    if (Q.CanCast(enemyGhost) && Q.GetPrediction(enemyGhost).Hitchance >= HitChance.Medium
                                               && Q.GetPrediction(enemyGhost).CollisionObjects.Count == 0)
                         Q.Cast(enemyGhost);
             }
@@ -250,7 +250,7 @@ namespace Illaoi___Tentacle_Kitty
                 foreach (var enemy in HeroManager.Enemies.Where(o =>
                     o.IsValidTarget(E.Range) && !o.IsDead && !o.IsZombie))
                     if (Config.Item("enemy." + enemy.CharacterData.CharacterName)
-                            .GetValue<bool>() && E.GetPrediction(enemy).Hitchance >= HitChance.High
+                            .GetValue<bool>() && E.GetPrediction(enemy).Hitchance >= HitChance.Medium
                                               && E.GetPrediction(enemy).CollisionObjects.Count == 0)
                         E.Cast(enemy);
         }

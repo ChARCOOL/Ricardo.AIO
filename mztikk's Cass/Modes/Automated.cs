@@ -129,7 +129,7 @@ namespace mztikksCassiopeia.Modes
             if (Spells.Q.IsReady() && !target.HasBuffOfType(BuffType.Poison))
             {
                 var qPred = Spells.Q.GetPrediction(target);
-                if (qPred.Hitchance >= HitChance.High) Spells.Q.Cast(qPred.CastPosition);
+                if (qPred.Hitchance >= HitChance.Medium) Spells.Q.Cast(qPred.CastPosition);
             }
         }
 
@@ -159,7 +159,7 @@ namespace mztikksCassiopeia.Modes
                 var wPred = Spells.W.GetPrediction(target);
                 if (wPred.CastPosition.Distance(ObjectManager.Player.Position) >= 550 && !wPred.CastPosition.IsWall()
                                                                                       && wPred.Hitchance >=
-                                                                                      HitChance.High)
+                                                                                      HitChance.Medium)
                     Spells.W.Cast(wPred.CastPosition);
             }
         }
