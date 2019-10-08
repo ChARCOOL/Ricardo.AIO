@@ -1981,8 +1981,8 @@ namespace EloFactory_Riven
         public static void KillSteal()
         {
             var target = TargetSelector.GetTarget(1200, TargetSelector.DamageType.Physical);
+            if (target == null) return;
 
-            if (target != null)
             {
                 if (Config.Item("Riven.R2Mode").GetValue<StringList>().SelectedIndex == 1 &&
                     target.IsValidTarget(R.Range) && Player.HasBuff("RivenWindScarReady") &&
